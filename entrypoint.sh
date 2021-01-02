@@ -13,12 +13,4 @@ if [ ! -f /opt/bridge/gpg_done ]; then
   touch /opt/bridge/gpg_done
 fi
 
-# The container starts interactively. It requires the container runtime to be
-# set to interactive with TTY. e.g. `--tty` and `--interactive` when using
-# podman or docker CLI.
-#
-# The container can be started with `--detach`, using the podman/docker/kubectl
-# attach command to attach at a later point. Use ctrl+p, ctrl+q to detach again.
-#
-# When attached, we can then use the CLI normally, i.e. run `login` + `info`.
 protonmail-bridge --cli --log-level ${LOG_LEVEL}
